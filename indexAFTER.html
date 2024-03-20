@@ -20,12 +20,15 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
 	<title>Dom Manipulation | VLS</title>
+
+	
 </head><!--link rel="stylesheet" href="./style.css"-->
 <style>
 	body {
-	background: #04A1BF;
+	background: #CECECE;
 	text-align: center;
 	font-family: 'Open Sans', sans-serif;
+	overflow: auto;
 }
 
 .intro {
@@ -130,34 +133,68 @@ input {
 .delete {
 	display: none;
 }
+
+
+/* Gaya untuk layar yang lebih besar dari 600px */
+@media (min-width: 600px) {
+  .container {
+    width: 50%;
+  }
+}
+
+/* Gaya untuk layar yang lebih kecil atau sama dengan 600px */
+@media (max-width: 600px) {
+  .container {
+    width: 100%;
+  }
+}
+
 </style>
 
+<svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0099ff" fill-opacity="1" d="M0,32L10.9,32C21.8,32,44,32,65,32C87.3,32,109,32,131,64C152.7,96,175,160,196,208C218.2,256,240,288,262,282.7C283.6,277,305,235,327,208C349.1,181,371,171,393,144C414.5,117,436,75,458,64C480,53,502,75,524,106.7C545.5,139,567,181,589,170.7C610.9,160,633,96,655,69.3C676.4,43,698,53,720,90.7C741.8,128,764,192,785,186.7C807.3,181,829,107,851,101.3C872.7,96,895,160,916,197.3C938.2,235,960,245,982,250.7C1003.6,256,1025,256,1047,245.3C1069.1,235,1091,213,1113,218.7C1134.5,224,1156,256,1178,277.3C1200,299,1222,309,1244,288C1265.5,267,1287,213,1309,165.3C1330.9,117,1353,75,1375,96C1396.4,117,1418,203,1429,245.3L1440,288L1440,0L1429.1,0C1418.2,0,1396,0,1375,0C1352.7,0,1331,0,1309,0C1287.3,0,1265,0,1244,0C1221.8,0,1200,0,1178,0C1156.4,0,1135,0,1113,0C1090.9,0,1069,0,1047,0C1025.5,0,1004,0,982,0C960,0,938,0,916,0C894.5,0,873,0,851,0C829.1,0,807,0,785,0C763.6,0,742,0,720,0C698.2,0,676,0,655,0C632.7,0,611,0,589,0C567.3,0,545,0,524,0C501.8,0,480,0,458,0C436.4,0,415,0,393,0C370.9,0,349,0,327,0C305.5,0,284,0,262,0C240,0,218,0,196,0C174.5,0,153,0,131,0C109.1,0,87,0,65,0C43.6,0,22,0,11,0L0,0Z"></path></svg>
 </head>
-<body>
-<!-- partial:index.partial.html -->
-<body>
+	<body>
 	<div class="container">
 		<div class="row">
 			<div class="intro col-12">
-				<h1>Work To-Dos</h1>
-				<div>
-					<div class="border1"></div>
-					<div c
-				</div>
+				<h1 style="border-style: dotted; border-radius: 20px;
+				background-color: darkgray;
+				box-shadow: 10px 10px 10px #888888;
+				color: white;"
+				>CATATAN</h1>
 			</div>
 		</div>
 
-		<div class="row">
-			<div class="helpText col-12">
-				<p id="first">Enter text into the input field to add items to your list.</p>
-				<p id="second">Click the item to mark it as complete.</p>
-				<p id="third">Click the "X" to remove the item from your list.</p>
-			</div>
-		</div>
+		<section style="text-align: left;
+						border-style: dotted; border-radius: 50px;
+						padding: 19px 25px 1px 25px;
+						background-color: lightblue;
+						font-family:fantasy">
+		
+					<p> *Masukkan teks ke dalam kolom "Tambah" untuk menambahkan item ke daftar Anda. <br>
+						*Klik enter untuk menandainya sebagai selesai. <br>
+						*Klik "Hapus" untuk menghapus item dari daftar Anda. <br>
+						*Klik "Ganti" untuk update data/teks yang anda masukkan. </p>
+			
+		</section>
 
+		<br>
+
+		<section style=" border-radius: 5px;
+						background-color: darkgray;
+						box-shadow: 10px 10px 10px #888888;
+						color: #f54864; 
+						font-size: 18px;
+						font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">
+			<p>*Pengubahan hanya dapat 1x dilakukan! maka masukkanlah dengan benar!!</p>
+		</section>
+	</div>
+	
+	
+	<div>
 		<div class="row">
 			<div class="col-12">
-				<input id="userInput" type="text" placeholder="New item..." maxlength="27">
+				<input id="userInput" type="text" placeholder="Tambah?..." maxlength="27">
 				<button id="enter"><i class="fas fa-pencil-alt"></i></button>
 			</div>
 		</div>
@@ -169,11 +206,12 @@ input {
 				</ul>
 			</div>
 		</div>
-
-		  <!---->
-
 	</div>
+	
+	<!---->
+	
 	<script type="text/javascript" src="script_method3.js"></script>
+	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0099ff" fill-opacity="1" d="M0,32L10.9,32C21.8,32,44,32,65,32C87.3,32,109,32,131,64C152.7,96,175,160,196,208C218.2,256,240,288,262,282.7C283.6,277,305,235,327,208C349.1,181,371,171,393,144C414.5,117,436,75,458,64C480,53,502,75,524,106.7C545.5,139,567,181,589,170.7C610.9,160,633,96,655,69.3C676.4,43,698,53,720,90.7C741.8,128,764,192,785,186.7C807.3,181,829,107,851,101.3C872.7,96,895,160,916,197.3C938.2,235,960,245,982,250.7C1003.6,256,1025,256,1047,245.3C1069.1,235,1091,213,1113,218.7C1134.5,224,1156,256,1178,277.3C1200,299,1222,309,1244,288C1265.5,267,1287,213,1309,165.3C1330.9,117,1353,75,1375,96C1396.4,117,1418,203,1429,245.3L1440,288L1440,320L1429.1,320C1418.2,320,1396,320,1375,320C1352.7,320,1331,320,1309,320C1287.3,320,1265,320,1244,320C1221.8,320,1200,320,1178,320C1156.4,320,1135,320,1113,320C1090.9,320,1069,320,1047,320C1025.5,320,1004,320,982,320C960,320,938,320,916,320C894.5,320,873,320,851,320C829.1,320,807,320,785,320C763.6,320,742,320,720,320C698.2,320,676,320,655,320C632.7,320,611,320,589,320C567.3,320,545,320,524,320C501.8,320,480,320,458,320C436.4,320,415,320,393,320C370.9,320,349,320,327,320C305.5,320,284,320,262,320C240,320,218,320,196,320C174.5,320,153,320,131,320C109.1,320,87,320,65,320C43.6,320,22,320,11,320L0,320Z"></path></svg>
 </body>
 </html>
 <!-- partial -->
@@ -208,7 +246,8 @@ function createListElement() {
 
 	// Add delete button functionality
 	var dBtn = document.createElement("button");
-	dBtn.appendChild(document.createTextNode("X"));
+
+	dBtn.appendChild(document.createTextNode("Hapus"));
 	li.appendChild(dBtn);
 	dBtn.addEventListener("click", deleteListItem);
 
@@ -219,7 +258,7 @@ function createListElement() {
 
 	// Add update button functionality
 	var uBtn = document.createElement("button");
-	uBtn.appendChild(document.createTextNode("Update"));
+	uBtn.appendChild(document.createTextNode("Ganti"));
 	li.appendChild(uBtn);
 	uBtn.addEventListener("click", updateListItem);
 }
@@ -240,7 +279,7 @@ enterButton.addEventListener("click",addListAfterClick);
 input.addEventListener("keypress", addListAfterKeypress);
 
 function updateListItem(event) {
-	var updatedText = prompt("Enter the updated text:");
+	var updatedText = prompt("Silahkan menganti:) ");
 	var li = event.target.parentElement; // Get the parent li element
 	li.textContent = updatedText; // Update the text content of the li element
 }
